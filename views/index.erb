@@ -5,7 +5,10 @@
   .my_div { 5px; border-color: red; border-style: dashed }
   </style>
   <body>
-    <h1>My name is <%=@random_name %></h1>
+    <h1>My name is <%=@name %></h1>
+    <% if @adorable %>
+    <h1>I am <%= @adorable%> cute!<h1>
+    <% end %>
     <div class="my_div">
       <img src="https://i.imgur.com/jFaSxym.png">
     </div>        

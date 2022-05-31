@@ -13,7 +13,15 @@ get '/reload-test' do
   'Reload is working!'
 end
 
-get '/cat' do
+get '/random-cat' do
   @random_name = ["Amigo", "Misty", "Almond"][(rand()*2).to_i]
   erb(:index)
 end
+
+get '/named-cat' do
+  p params
+  @name = params[:name]
+  @adorable = params[:adorable]
+  erb(:index)
+end
+
