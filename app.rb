@@ -13,15 +13,6 @@ get '/reload-test' do
   'Reload is working!'
 end
 
-get '/test' do
-  "<html>
-    <head>
-    </head>
-    <body>
-      <div style=\"border-width: 5px; border-color: red; border-style: dashed\">
-        <img src=\"https://i.imgur.com/jFaSxym.png\" >
-      </div>        
-    </body>
-  </html>"
+get '/cat' do
+  erb(:index)
 end
-
