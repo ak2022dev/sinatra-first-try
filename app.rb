@@ -14,5 +14,6 @@ get '/reload-test' do
 end
 
 get '/cat' do
+  @random_name = ["Amigo", "Misty", "Almond"][(rand()*2).to_i]
   erb(:index)
 end
